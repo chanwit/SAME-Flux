@@ -395,7 +395,7 @@ spec:
       containers:
       - command:
         - /manager
-        image: quay.io/chanwit/same-controller:v0.1.4
+        image: quay.io/chanwit/same-controller:v0.1.5
         imagePullPolicy: IfNotPresent
         name: manager
         resources:
