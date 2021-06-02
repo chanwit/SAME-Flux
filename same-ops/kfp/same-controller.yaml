@@ -378,6 +378,7 @@ spec:
       labels:
         control-plane: controller-manager
     spec:
+      serviceAccountName: ml-pipeline
       containers:
       - command:
         - /manager
