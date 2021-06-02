@@ -3,6 +3,14 @@ kind: ServiceAccount
 metadata:
   labels:
     application-crd-id: kubeflow-pipelines
+  name: same-cli
+  namespace: kubeflow
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    application-crd-id: kubeflow-pipelines
   name: argo
   namespace: kubeflow
 ---
@@ -669,6 +677,9 @@ subjects:
 - kind: ServiceAccount
   name: ml-pipeline
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -750,6 +761,9 @@ subjects:
 - kind: ServiceAccount
   name: pipeline-runner
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow  
 ---
 apiVersion: v1
 data:

@@ -345,7 +345,7 @@ roleRef:
   name: leader-election-role
 subjects:
 - kind: ServiceAccount
-  name: pipeline-runner
+  name: same-cli
   namespace: kubeflow
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -358,7 +358,7 @@ roleRef:
   name: manager-role
 subjects:
 - kind: ServiceAccount
-  name: pipeline-runner
+  name: same-cli
   namespace: kubeflow
 ---
 apiVersion: apps/v1
@@ -378,7 +378,7 @@ spec:
       labels:
         control-plane: controller-manager
     spec:
-      serviceAccountName: pipeline-runner
+      serviceAccountName: same-cli
       containers:
       - command:
         - /manager
