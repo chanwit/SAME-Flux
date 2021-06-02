@@ -611,6 +611,9 @@ subjects:
 - kind: ServiceAccount
   name: argo
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -628,6 +631,9 @@ subjects:
 - kind: ServiceAccount
   name: kubeflow-pipelines-cache
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow  
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -644,6 +650,9 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: kubeflow-pipelines-cache-deployer-sa
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow  
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -660,6 +669,9 @@ subjects:
 - kind: ServiceAccount
   name: kubeflow-pipelines-metadata-writer
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow  
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -696,6 +708,9 @@ subjects:
 - kind: ServiceAccount
   name: ml-pipeline-persistenceagent
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow  
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -712,6 +727,9 @@ subjects:
 - kind: ServiceAccount
   name: ml-pipeline-scheduledworkflow
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow  
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -729,6 +747,9 @@ subjects:
 - kind: ServiceAccount
   name: ml-pipeline-ui
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow  
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -745,6 +766,9 @@ subjects:
 - kind: ServiceAccount
   name: ml-pipeline-viewer-crd-service-account
   namespace: kubeflow
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow  
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
