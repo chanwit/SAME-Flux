@@ -364,15 +364,15 @@ subjects:
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-name: same-cli-clusteradmin
-subjects:
-  - kind: ServiceAccount
-    name: same-cli
-    namespace: kubeflow
+  name: same-cli-clusteradmin
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: same-cli
+  namespace: kubeflow
 ---
 apiVersion: apps/v1
 kind: Deployment
