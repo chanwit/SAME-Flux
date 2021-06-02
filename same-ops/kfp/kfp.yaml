@@ -914,6 +914,7 @@ spec:
   selector:
     app: minio
     application-crd-id: kubeflow-pipelines
+  type: LoadBalancer
 ---
 apiVersion: v1
 kind: Service
