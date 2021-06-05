@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./infra/same-ops-prod/kfp-cluster-scoped
+  path: ./same-ops-prod/kfp-cluster-scoped
   prune: true
   sourceRef:
     kind: GitRepository
@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./infra/same-ops-prod/kfp
+  path: ./same-ops-prod/kfp
   prune: true
   sourceRef:
     kind: GitRepository
@@ -36,7 +36,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./infra/same-ops-prod/app
+  path: ./same-ops-prod/app
   prune: true
   sourceRef:
     kind: GitRepository
